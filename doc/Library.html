@@ -1,0 +1,2147 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Library.files/filelist.xml">
+<title>C Standard Functions</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>雨林木风</o:Author>
+  <o:LastAuthor>雨林木风</o:LastAuthor>
+  <o:Revision>51</o:Revision>
+  <o:TotalTime>202</o:TotalTime>
+  <o:Created>2012-06-20T07:56:00Z</o:Created>
+  <o:LastSaved>2012-07-06T11:52:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1170</o:Words>
+  <o:Characters>6670</o:Characters>
+  <o:Company>WwW.YlmF.CoM</o:Company>
+  <o:Lines>55</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>7825</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayBackgroundShape/>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131078"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+h3
+	{mso-style-next:正文;
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:170%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:16.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableGrid
+	{mso-style-name:网格型;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="23554"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='tab-interval:21.0pt;text-justify-trim:
+punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:24.0pt;font-family:宋体'>WSC Library
+Reference<o:p></o:p></span></b></p>
+
+<h3><span lang=EN-US><o:p>&nbsp;</o:p></span></h3>
+
+<h3><span lang=EN-US>C Standard Functions</span></h3>
+
+<p class=MsoNormal><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>注意</span><span lang=EN-US>printf</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>sprintf</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>、</span><span lang=EN-US>scanf</span><span style='font-family:
+宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>、</span><span
+lang=EN-US>sscanf</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>是重载的函数，它们没有可变参数列表。</span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=119 rowspan=14 valign=top style='width:89.3pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-indent:6.9pt;mso-char-indent-count:.49'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+  font-family:宋体'>stdio.h<o:p></o:p></span></b></p>
+  </td>
+  <td width=449 valign=top style='width:336.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int printf( char
+  *format, int val )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int printf( char
+  *format, float val )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int printf( char
+  *format, char* val )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int sprintf( char
+  *buffer, char *format, int val )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int sprintf( char
+  *buffer, char *format, float val )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int sprintf( char
+  *buffer, char *format, char* val )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int scanf( char
+  *format, int *address )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int scanf( char
+  *format, float *address )</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int scanf( char
+  *format, char *address )</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int sscanf( char
+  *buffer, char *format, int *address )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int sscanf( char
+  *buffer, char *format, int *address )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int sscanf( char
+  *buffer, char *format, float *address )</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int getchar( void
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:13.15pt'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int putchar( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width=119 rowspan=12 valign=top style='width:89.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+  font-family:宋体'>ctype.h<o:p></o:p></span></b></p>
+  </td>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isalnum( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isalpha( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int iscntrl( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isdigit( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isgraph( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int islower( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isprint( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int ispunct( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isspace( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int isupper( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int tolower( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int toupper( int c
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26'>
+  <td width=119 rowspan=19 valign=top style='width:89.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-indent:13.75pt;mso-char-indent-count:.98'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+  font-family:宋体'>math.h</span></b></p>
+  </td>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float acos( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float asin( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float atan( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float <a
+  name="OLE_LINK6"></a><a name="OLE_LINK5"><span style='mso-bookmark:OLE_LINK6'>atan2</span></a>(
+  float x, float y )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float cos( float x
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float sin( float x
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float tan( float x
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float cosh( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float sinh( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float tanh( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:36'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float log( float x
+  )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float log10( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float modf( float
+  x, float *y )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float pow( float
+  x, float y )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:40'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float sqrt( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float ceil( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:42'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float fabs( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float floor( float
+  x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float fmod( float
+  x, float y )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:45'>
+  <td width=119 rowspan=10 valign=top style='width:89.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+  style='font-size:14.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+  style='font-size:14.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal style='text-indent:6.9pt;mso-char-indent-count:.49'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+  font-family:宋体'>stdlib.h</span></b></p>
+  </td>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>float atof( char
+  *str )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:46'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int atoi( char
+  *str )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:47'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int rand( void )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:48'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><a name="OLE_LINK1"><span lang=EN-US style='font-family:
+  宋体'>#define RAND_MAX</span></a><span lang=EN-US style='font-family:宋体'> 32767<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:49'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void srand( int
+  seed )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:50'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void *calloc( int
+  nelem, int elsize )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:51'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void *malloc( int
+  size )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:52;height:5.85pt'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.85pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void *calloc( void
+  *ptr, int size )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:53'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void free( void
+  *ptr )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:54'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int abs( int x )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:55'>
+  <td width=119 rowspan=18 valign=top style='width:89.3pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-indent:6.9pt;mso-char-indent-count:.49'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+  font-family:宋体'>string.h<o:p></o:p></span></b></p>
+  </td>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void memcpy( void
+  *p1, void *p2, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:56'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strcpy( char
+  *s1, char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:57'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strncpy(
+  char *s1, char *s2, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:58'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strcat( char
+  *s1, char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:59'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strncat(
+  char *s1, char *s2, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:60'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int memcmp( void
+  *p1, void *p2, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:61'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int strcmp( char
+  *s1, char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:62'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int strncmp( char
+  *s1, char *s2, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:63'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void *memchr( void
+  *p, int c, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:64'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strchr( char
+  *s, int c )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:65'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int strcspn( char
+  *s1, char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:66'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strpbrk(
+  char *s1, char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:67'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strrchr(
+  char *s, int c )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:68'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int strspn( char *s1,
+  char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:69'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>char *strstr( char
+  *s1, char *s2 )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:70'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void memset( void
+  *s, int c, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:71'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>int strlen( char
+  *s )<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:72;mso-yfti-lastrow:yes'>
+  <td width=449 valign=top style='width:336.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>void *memmove(
+  void *s1, void *s2, int n )<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h3><span lang=EN-US>WSC Functions</span></h3>
+
+<p class=MsoNormal><span style='font-family:宋体'>使用以下函数或定义需要包含 <b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>fxlib.h</span></b><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>图形函数操作的都是显存，需要使用<span
+lang=EN-US>putdisp()</span>把显存里的内容输出到屏幕<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>点的横坐标范围是<span lang=EN-US>0~127</span>，纵坐标范围是<span
+lang=EN-US>0~63<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'>void</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:宋体'> allclr( void )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>清除全部显存<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'>void</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:宋体'> areaclr<a name="OLE_LINK3"></a><a name="OLE_LINK2"><span
+style='mso-bookmark:OLE_LINK3'>( int x1, int y1, int x2, int y2 )<o:p></o:p></span></a></span></b></p>
+
+<span style='mso-bookmark:OLE_LINK3'></span><span style='mso-bookmark:OLE_LINK2'></span>
+
+<p class=MsoNormal><span style='font-family:宋体'>清除指定矩形区域的显存，（<span lang=EN-US>x1,y1</span>）是矩形左上角，（<span
+lang=EN-US>x2</span>，<span lang=EN-US>y2</span>）是矩形右下角<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'>void</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:宋体'> arearev( int x1, int y1, int x2, int y2 )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>对指定区域矩形区域进行反转颜色，（<span
+lang=EN-US>x1,y1</span>）是矩形左上角，（<span lang=EN-US>x2</span>，<span lang=EN-US>y2</span>）是矩形右下角<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'>void</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:宋体'> putdisp( void )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>将显存输出的屏幕上<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'>void</span></b></span><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:宋体'> setpoint( int x, int y, char kind )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>对点（<span lang=EN-US>x</span>，<span
+lang=EN-US>y</span>）进行设置，<span lang=EN-US>kind</span>值决定颜色，<span lang=EN-US> 1</span>是黑色，<span
+lang=EN-US>0</span>是白色<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int getpoint( int x, ing y )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>返回点（<span lang=EN-US>x</span>，<span
+lang=EN-US>y</span>）的眼色，<span lang=EN-US>1</span>是黑色，<span lang=EN-US>0</span>是白色<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void drawline( int x1, int y1, int x2,
+int y2 )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>画一条（<span lang=EN-US>x1</span>，<span
+lang=EN-US>y1</span>）到（<span lang=EN-US>x2</span>，<span lang=EN-US>y2</span>）的黑线<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void clearline( int x1, int y1, int x2,
+int y2 )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span style='font-family:宋体'>画一条（<span
+lang=EN-US>x1</span>，<span lang=EN-US>y1</span>）到（<span lang=EN-US>x2</span>，<span
+lang=EN-US>y2</span>）的白线<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span lang=EN-US style='font-family:
+宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void drawcircle( int x, int y, int r )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span style='font-family:宋体'>在（<span
+lang=EN-US>x</span>，<span lang=EN-US>y</span>）画一个半径<span lang=EN-US>r</span>的空心圆<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span lang=EN-US style='font-family:
+宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void fillcircle( int x, int y, int r )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span style='font-family:宋体'>在（<span
+lang=EN-US>x</span>，<span lang=EN-US>y</span>）画一个半径<span lang=EN-US>r</span>的实心圆<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span lang=EN-US style='font-family:
+宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void drawbox( int x1, int y1, int x2,
+int y2 )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>画一个空心矩形框，（<span lang=EN-US>x1,y1</span>）是矩形左上角，（<span
+lang=EN-US>x2</span>，<span lang=EN-US>y2</span>）是矩形右下角<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void fillbox( int x1, int y1, int x2,
+int y2 )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>画一个实心矩形框，（<span lang=EN-US>x1,y1</span>）是矩形左上角，（<span
+lang=EN-US>x2</span>，<span lang=EN-US>y2</span>）是矩形右下角<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='tab-stops:382.5pt'><span lang=EN-US style='font-family:
+宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void locate( int x, int y )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>设置输出光标的位置为（<span lang=EN-US>x</span>，<span
+lang=EN-US>y</span>） 这里<span lang=EN-US>x</span>的范围是<span lang=EN-US>1~21</span>，<span
+lang=EN-US>y</span>的范围是<span lang=EN-US>1~8<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void print( char *str )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>在光标位置输出字符串<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void printxy( int x, int y, char *str,
+int type )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><a name="OLE_LINK4"><span style='font-family:宋体'>在（<span
+lang=EN-US>x,y</span>）位置输出字符串，<span lang=EN-US>type</span>值等于<span lang=EN-US>1</span>时反色，等于<span
+lang=EN-US>0</span>时正常<span lang=EN-US><o:p></o:p></span></span></a></p>
+
+<p class=MsoNormal><span style='mso-bookmark:OLE_LINK4'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK4'></span>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void printmini( int x, int y, char
+*str, int type )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>在（<span lang=EN-US>x,y</span>）位置输出字符串（小字体），<span
+lang=EN-US>type</span>的值见下表<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>MINI_OVER<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>覆盖<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>MINI_OR<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>OR<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>MINI_REV<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>反色<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>MINI_REVOR<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>反色<span lang=EN-US> + OR<o:p></o:p></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void savedisp( char num )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>把显存保持到一个标号为<span lang=EN-US>num</span>的系统区域，<span
+lang=EN-US>num</span>的值只能是<a name="OLE_LINK7"><span lang=EN-US>SAVEPAGE1</span></a><span
+lang=EN-US>, SAVEPAGE2, SAVEPAGE3<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void restdisp( char num )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>把之前用<span lang=EN-US>savedisp</span>保持的显存重新设置到显存区<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void popupwin( int n )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>弹出一个<span lang=EN-US>n</span>行的窗口，<span
+lang=EN-US>n</span>的范围是<span lang=EN-US>1~5<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int openfile( const char *name, int
+mode )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>name</span><span
+style='font-family:宋体'>是文件名<a name="OLE_LINK8">（</a><a href="#文件格式"><span
+style='mso-bookmark:OLE_LINK8'>查看文件名格式</span><span style='mso-bookmark:OLE_LINK8'></span></a><span
+style='mso-bookmark:OLE_LINK8'>）<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK8'></span>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>mode</span><span
+style='font-family:宋体'>决定打开方式，只能是以下的值<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>OPEN_R<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>读文件<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>OPEN_W<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>写文件<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>OPEN_RW<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>读写文件<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体'>如果打开成功，会返回一个特殊的文件句柄（<span
+lang=EN-US>handle</span>）<span lang=EN-US>,</span>它是一个大于等于<span lang=EN-US>0</span>的值<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:10.5pt;font-family:宋体'>如果打开失败，会返回一个错误代码，它是负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int readfile( int handle, void *buf,
+int size, int readpos )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>handle</span><span
+style='font-family:宋体'>是<span lang=EN-US>openfile</span>的返回值<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>readpos</span><span
+style='font-family:宋体'>是开始读取的位置，如果它等于<span lang=EN-US>-1</span>，那么将在上次读取结束的位置开始<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>其他参数和返回值与<span lang=EN-US>fopen</span>类似<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int writefile( int handle, void *buf,
+int size )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>handle</span><span
+style='font-family:宋体'>是<span lang=EN-US>openfile</span>的返回值，其他与<span
+lang=EN-US>fwrite</span>类似<span lang=EN-US>, <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int seekfile( int handle, int pos )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><a name="OLE_LINK9"><span lang=EN-US style='font-family:
+宋体'>handle</span></a><span style='mso-bookmark:OLE_LINK9'><span
+style='font-family:宋体'>是<span lang=EN-US>openfile</span>的返回值，<span lang=EN-US>pos</span>指定了读写文件的位置<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:OLE_LINK9'><span style='font-family:
+宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:OLE_LINK9'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK9'></span>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int closefile( int handle )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>关闭文件<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int getfree( int type, int *freebytes )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>读取剩余可用内存。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>type</span><span
+style='font-family:宋体'>只能是下列值<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>MAIN_FREE<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>main memory<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>STO_FREE<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>storage memory<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>SD_FREE<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>sd card<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-family:宋体'>设备剩余空间的值会存储在<span lang=EN-US>freebytes</span>指向的<span
+lang=EN-US>int</span>值中<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><a name="OLE_LINK11"><span style='font-family:宋体'>成功返回<span
+lang=EN-US>0</span>，失败返回负数<span lang=EN-US><o:p></o:p></span></span></a></p>
+
+<p class=MsoNormal><span style='mso-bookmark:OLE_LINK11'><span lang=EN-US
+style='font-family:宋体'><o:p>&nbsp;</o:p></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK11'></span>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int getsize( int handle )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>handle</span><span
+style='font-family:宋体'>是<span lang=EN-US>openfile</span>的返回值<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>返回文件大小<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int createfile( <a name="OLE_LINK10">const
+</a>char *name, int size )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>创建一个名字为<span lang=EN-US>name</span>，大小为<span
+lang=EN-US>size</span>的文件（<span lang=EN-US><a href="#文件格式"><span lang=EN-US><span
+lang=EN-US>查看文件名格式</span></span></a></span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int createdir( const char *name )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>创建一个名字为<span lang=EN-US>name</span>的目录（<span
+lang=EN-US><a href="#文件格式"><span lang=EN-US><span lang=EN-US>查看文件名格式</span></span></a></span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int deletefile( const char *name )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>删除文件（<span lang=EN-US><a
+href="#文件格式"><span lang=EN-US><span lang=EN-US>查看文件名格式</span></span></a></span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int deletedir( const char *name )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>删除目录<a name="OLE_LINK14"></a><a
+name="OLE_LINK13"><span style='mso-bookmark:OLE_LINK14'>（</span></a><a
+href="#文件格式"><span style='mso-bookmark:OLE_LINK13'><span style='mso-bookmark:
+OLE_LINK14'>查看文件名格式</span></span><span style='mso-bookmark:OLE_LINK13'><span
+style='mso-bookmark:OLE_LINK14'></span></span></a><span style='mso-bookmark:
+OLE_LINK13'><span style='mso-bookmark:OLE_LINK14'>）</span></span><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体;color:red'>以下三个函数需要配合使用，例子见<span
+lang=EN-US>example\find.c<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int findfirst( char *pathname, int
+*handle, char *foundname, int *fileinfo )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>pathname</span><span
+style='font-family:宋体'>是寻找路径（<span lang=EN-US><a href="#文件格式"><span lang=EN-US><span
+lang=EN-US>查看文件名格式</span></span></a></span>），可以使用通配符＂<span lang=EN-US>*</span>＂<span
+lang=EN-US>,</span>如＂<span lang=EN-US>\\\\fls0\\</span>＊<span lang=EN-US>.txt</span>＂、＂<span
+lang=EN-US>\\\\fls0\\</span>＊＂<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>文件寻找句柄将保持在<span lang=EN-US>handle</span>指向的<span
+lang=EN-US>int</span>里（用于<span lang=EN-US>findnext</span>和<span lang=EN-US>findclose</span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>foundname</span><span
+style='font-family:宋体'>将保存找到文件的名字<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>fileinfo</span><span
+style='font-family:宋体'>保持找到文件的信息，它应该是一个大小为<span lang=EN-US>6</span>的<span
+lang=EN-US>int</span>型数组（<span lang=EN-US>int fileinfo[6]</span>），信息存储位置见下表<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>索引<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>信息<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>0<o:p></o:p></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>文件<span lang=EN-US>id<o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>1<o:p></o:p></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>文件类型<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>2<o:p></o:p></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>文件大小<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.5pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>3<o:p></o:p></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.5pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>数据大小（除去文件头）<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>4<o:p></o:p></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>property</span><span
+  style='font-family:宋体'>（<span lang=EN-US>the file has not been completed,
+  except when property is 0.</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>5<o:p></o:p></span></p>
+  </td>
+  <td width=504 valign=top style='width:378.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>地址（请不要直接访问这个地址）<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-family:宋体'>文件类型见下表<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>值<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>类型<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>0<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>目录<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>1<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>文件<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>2<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>Add-In<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.5pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>3<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>eActivity<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>4<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>Language<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>5<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>Bitmap<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>6<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>Main Mem</span><span
+  style='font-family:宋体'>数据<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>7<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>临时数据<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>8<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>. </span><span
+  style='font-family:宋体'>（当前目录）<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>9<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>..</span><span
+  style='font-family:宋体'>（父目录）<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>10<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:
+  Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;color:#313131'>卷标</span><span
+  lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int findnext( int handle, char
+*foundname, int *fileinfo )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><a name="OLE_LINK15"><span lang=EN-US style='font-family:
+宋体'>handle</span></a><span style='mso-bookmark:OLE_LINK15'><span
+style='font-family:宋体'>是<span lang=EN-US>findfirst</span>的第二个参数指向的对象<span
+lang=EN-US><o:p></o:p></span></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK15'></span>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>foundname</span><span
+style='font-family:宋体'>和<span lang=EN-US>fileinfo</span>参考<span lang=EN-US>findfirst<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int findclose( int handle )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>handle</span><span
+style='font-family:宋体'>是<span lang=EN-US>findfirst</span>的第二个参数指向的对象<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>成功返回<span lang=EN-US>0</span>，失败返回负数<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int getkey( int *keycode )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>获取一个按键，按键编码保存在<span lang=EN-US>keycode</span>指向的<span
+lang=EN-US>int</span>值中<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>如果字符键被按下，返回<span lang=EN-US>1</span>。如果控制键被按下，返回<span
+lang=EN-US>0</span>。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>如果按键队列为空，它会等待，直到一个按键被按下（<span
+lang=EN-US><a href="#按键代码"><span lang=EN-US><span lang=EN-US>查看按键代码</span></span></a></span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int waitkey( void )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>获取一个按键，并返回按键编码，是<span
+lang=EN-US>getkey</span>的一种简化使用<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>如果按键队列为空，它会等待，直到一个按键被按下（<span
+lang=EN-US><a href="#按键代码"><span lang=EN-US><span lang=EN-US>查看按键代码</span></span></a></span>）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int iskeydown( int keycode )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>检测<span lang=EN-US>keycode</span>是否被按下，如果按下就返回<span
+lang=EN-US>1</span>，否则返回<span lang=EN-US>0<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>如果<a name="OLE_LINK12">按键队列</a>为空，这个函数不会等待。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void sleep( int millsecond )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>延时<span lang=EN-US>millsecond</span>毫秒<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void cpuspeed( int multiple )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>设定<span lang=EN-US>cpu</span>时钟的速度，<span
+lang=EN-US>multiple</span>是默认速度的倍数，取值范围是<span lang=EN-US>1~4<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>（<span lang=EN-US>4</span>即<span
+lang=EN-US>4</span>倍超频）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void resetcalc( void )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>和按计算器背后的<span lang=EN-US>reset</span>键效果相同<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int readrtc( int type )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>读取<span lang=EN-US>real time
+clock</span>（实时时钟）<span lang=EN-US>,type</span>只能是以下的值<span lang=EN-US><o:p></o:p></span></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>RTC_YERA<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>年<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>RTC_MONTH<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>月<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>RTC_DAY<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>日<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:12.5pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>RTC_HOUR<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.5pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>小时<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>RTC_MINUTE<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>分钟<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>RTC_SECOND<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>秒<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;height:16.25pt'>
+  <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal style='tab-stops:center 39.4pt'><span lang=EN-US
+  style='font-family:宋体'>RTC_DAYOFWEEK<o:p></o:p></span></p>
+  </td>
+  <td width=144 valign=top style='width:108.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>星期<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>void setrtc( int type, int value )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>设置<span lang=EN-US>real time
+clock</span>（实时时钟）<span lang=EN-US>,type</span>的值见上表<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>关于<span lang=EN-US>rtc</span>读写的例子见
+<span lang=EN-US>example\CLOCK.c<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name="OLE_LINK16"><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'>int bitand( int a, int b )<o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal><span style='mso-bookmark:OLE_LINK16'><span
+style='font-family:宋体'>按位与，即<span lang=EN-US> a &amp; b<o:p></o:p></span></span></span></p>
+
+<span style='mso-bookmark:OLE_LINK16'></span>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int bitor( int a, int b )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>按位或，即<span lang=EN-US> a | b<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int bitxor( int a, int b )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>按位异或，即<span lang=EN-US> a ^ b<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int bitnot( int a )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>按位取反，即<span lang=EN-US> ~ b<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int shiftl( int a, int b )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>向左位移，即<span lang=EN-US> a
+&lt;&lt; b<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int shiftr( int a, int b )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>向右位移，即<span lang=EN-US> a
+&gt;&gt; b<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>int exefvm( char *filename, char *msg )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>执行另一个<span lang=EN-US>fvm</span>程序，<span
+lang=EN-US>msg</span>用来传递信息（<span lang=EN-US><a href="#文件格式"><span lang=EN-US><span
+lang=EN-US>查看文件名格式</span></span></a></span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>返回值就是程序<span lang=EN-US>main</span>的返回值<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:宋体'>char *getfvmmsg( void )<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>获取<span lang=EN-US>exefvm</span>传递过来的参数，如果是直接由<span
+lang=EN-US>FVM</span>执行的，则返回<span lang=EN-US>NULL<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>关于信息传递的例子见<span lang=EN-US>example\msgpass\<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name=文件格式></a><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;color:red'>文件名格式<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>举几个例子来说明文件名格式：<b
+style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>Storage Mem</span><span
+style='font-family:宋体'>中根目录下的<span lang=EN-US>2.txt</span>的名字是＂<span
+lang=EN-US>\\\\fls0\\2.txt</span>＂<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>Storage Mem</span><span
+style='font-family:宋体'>中目录<span lang=EN-US>book</span>下的<span lang=EN-US>2.txt</span>的名字是＂<span
+lang=EN-US>\\\\fls0\\book\\2.txt</span>＂<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>sd</span><span
+style='font-family:宋体'>卡中根目录下的<span lang=EN-US>2.txt</span>的名字是 ＂<span
+lang=EN-US>\\\\crd0\\2.txt</span>＂<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>sd</span><span
+style='font-family:宋体'>卡中目录<span lang=EN-US>music</span>的名字是＂<span lang=EN-US>\\\\crd0\\book</span>＂<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>现在还不能处理<span lang=EN-US>Main
+Mem</span>中的文件<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体;color:red'>注意文件名是大小写敏感的！</span><span
+lang=EN-US style='font-family:宋体'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>关于文件操作的例子见<span lang=EN-US>
+example\FILE.c<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name=按键代码></a><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;color:red'>按键代码<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>fxlib.h</span><span
+style='font-family:宋体'>为几个常用的键定义了更方便的宏<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_UP<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>30018<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_DOWN<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30023<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_LEFT<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30020<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_RIGHT<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30021<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_EXIT<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30002<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_AC<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30015<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_DEL<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30025<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_EXE<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30024<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_SHIFT<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30006<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_ALPHA<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>30007<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_MENU<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30003<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define
+KEY_OPTN<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30008<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_F1<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30009<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_F2<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30010<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'>#define KEY_F3<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>30011<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>其他按键的代码获取方法见<span lang=EN-US>
+example\KEYCODE.c<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:宋体'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-family:宋体;color:red'><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

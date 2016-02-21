@@ -1,0 +1,12 @@
+//------------------------------------------------------------------
+// Addin-Application header control file, created with the CASIO SDK
+//------------------------------------------------------------------
+[OUTPUT]     : "WSC.G1A"
+[BINDATA]    : "FXADDINror.bin"
+[DISPNAME]   : "WSC"
+[APPNAME]    : "@WSC"
+[VERSION]    : "01.30.0000"
+[APL_ICON]   : "MainIcon.bmp"
+[MODULE_NUM] : 0
+[MOD1_TITLE] : "WSC"
+[MOD1_ICON]  : "eActivityIcon.bmp"
